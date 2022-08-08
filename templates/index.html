@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/style.css">
+    
+    <title>Laptop Recommendation Application</title>
+</head>
+<body>
+    <div class="main-container">
+    <div class="container">
+        <div class="title">LaRA</div>
+        <form  method="POST" id="todo">
+            <div class="form">
+                    <div class = "input-box">
+                        <label for="ram">RAM(in GB)</label>
+                        <datalist  id="ram">
+                            <option value="2" selected>2</option>
+                            <option value="4">4</option>
+                            <option value="6">6</option>
+                            <option value="8">8</option>
+                            <option value="12">12</option>
+                            <option value="16">16</option>
+                            <option value="24">24</option>
+                            <option value="32">32</option>
+                            <option value="64">64</option>
+                        </datalist>  
+                        <input list="ram" name="ram" id="mainram" placeholder="2" />
+                    </div>                   
+                <div class="input-box">
+                    <label for="scr">Screensize (inches)</label>
+                    <input class="input" type="text" id = "scr" name="scr"  value="14.0" required>
+                </div>
+                <div class="input-box">
+                        <label for="company">Company</label>
+                        <datalist name="company" id="compan">
+                            <option value="Acer" selected>Acer</option>
+                            <option value="Apple">Apple</option>
+                            <option value="Asus">Asus</option>
+                            <option value="Dell">Dell</option>
+                            <option value="HP">HP</option>
+                            <option value="Lenovo">Lenovo</option>
+                            <option value="MSI">MSI</option>
+                            <option value="Toshiba">Toshiba</option>
+                            <option value="Microsoft">Microsoft</option>
+                            <option value="Chuwi">Chuwi</option>
+                            <option value="Huawei">Huawei</option>
+                            <option value="Xiaomi">Xiaomi</option>
+                            <option value="Vero">Vero</option>
+                            <option value="Mediacom">Mediacom</option>
+                            <option value="Samsung">Samsung</option>
+                            <option value="Google">Google</option>
+                            <option value="Fujitsu">Fujitsu</option>
+                            <option value="LG">LG</option>
+                        </datalist>
+                        <input list="compan" name="company" id="company" placeholder="Acer" />
+                </div>
+                <div class="input-box">
+                        <label for="typename">Type Name</label>
+                        <datalist name="typename" id="typenam">
+                            <option value="2in1convertible">2in1convertible</option>
+                            <option value="gaming" selected>gaming</option>
+                            <option value="netbook">netbook</option>
+                            <option value="notebook">notebook</option>
+                            <option value="ultrabook">ultrabook</option>
+                            <option value="workstation">workstation</option>
+                        </datalist> 
+                        <input list="typenam" name="typename" id="typename" placeholder="gaming" />
+                </div>
+                <div class="input-box">
+                        <label for="opsys">Operating System</label>
+                        <datalist name="opsys" id="opsy">
+                            <option value="windows" >windows</option>
+                            <option value="mac">mac</option>
+                            <option value="linux">linux</option>
+                            <option value="other">other</option>
+                        </datalist>
+                        <input list="opsy" name="opsys" id="opsys" placeholder="windows" /> 
+                </div>
+                <div class="input-box">
+                        <label for="cpuname">CPU</label>   
+                        <datalist name="cpuname" id="cpunam">
+                            <option value="intelcorei3" selected>intelcorei3</option>
+                            <option value="intelcorei5">intelcorei5</option>
+                            <option value="intelcorei7">intelcorei7</option>
+                            <option value="amdprocessor">amdprocessor</option>
+                            <option value="otherintelprocessor">otherintelprocessor</option>
+                        </datalist>
+                        <input list="cpunam" name="cpuname" id="cpuname" placeholder="intelcorei3"/>  
+                </div>
+                <div class="input-box">
+                        <label for="resolution">Resolution</label>
+                        <datalist name="resolution" id="resolutio">
+                            <option value="1920X1080" selected>1920X1080</option>
+                            <option value="1366X768">1366X768</option>
+                            <option value="1600X900">1600X900</option>
+                            <option value="3840X2160">3840X2160</option>
+                            <option value="3200X1800">3200X1800</option>
+                            <option value="2880X1800">2880X1800</option>
+                            <option value="2560X1600">2560X1600</option>
+                            <option value="2560X1440">2560X1440</option>
+                            <option value="2304X1440">2304X1440</option>
+                        </datalist>
+                        <input name="resolution" list="resolutio" id="resolution"  placeholder="1920X1080"/>  
+                    </div>
+                <div class="input-box">
+                        <label for="hdd">HDD(in GB)</label>   
+                        <datalist name="hdd" id="hd">
+                            <option value="0" selected>0</option>
+                            <option value="128">128</option>
+                            <option value="256">256</option>
+                            <option value="512">512</option>
+                            <option value="1024">1024</option>
+                            <option value="2048">2048</option>
+                        </datalist>
+                        <input name="hdd" id="hdd" list="hd" placeholder="0" />  
+                </div>
+                <div class="input-box">
+                        <label for="ssd">SSD(in GB)</label>   
+                        <datalist name="ssd" id="ss">
+                            <option value="0">0</option>
+                            <option value="8">8</option>
+                            <option value="128" selected>128</option>
+                            <option value="256">256</option>
+                            <option value="512">512</option>
+                            <option value="1024">1024</option>                            
+                        </datalist>
+                        <input name="ssd" id="ssd" list='ss' placeholder="128"/>  
+                </div>
+                <div class="input-box">
+                        <label for="gpuname">GPU</label>
+                        <datalist name="gpuname" id="gpunam">
+                            <option value="intel" selected>intel</option>
+                            <option value="amd">amd</option>
+                            <option value="nvidia">nvidia</option>
+                        </datalist>
+                        <input name="gpuname" id="gpuname" list="gpunam" placeholder="intel" >
+                </div>
+                <div class="check">   
+                      <div>
+                        <label for="touchscreen">Touch Screen</label>
+                        <input type="checkbox" name="touchscreen">
+                      </div>
+                      <div>
+                        <label for="ips">IPS</label>
+                        <input type="checkbox" name="ips">
+                        </div>
+                </div>
+            </div>
+            <div class="button">
+                <input class="btn" type="submit" value="Recommend">
+            </div>
+        </form>
+        
+        <div class="result">
+            {% if pred_value != 0 %}
+             {% set pred_value = "{:,}".format(pred_value) %}
+            <p>Estimated Price : <span class="rupee"></span> {{pred_value}} </p>
+            {% endif %}
+        </div>
+    </div>
+    </div>
+    <!-- to access obj[i]
+    for keys in obj[i]  -->
+    {%if obj != '' %}
+    <div class="container2">
+        <h2 class="title">Recommendation</h2>
+        <div class="content">
+            {% for i in [0,1,2]%}
+            <div class="card">
+                
+                <div class="card-content">
+                    <div class="image">
+                        <img src ={{obj[i]['image']}} alt=""/>
+                    </div>
+                </div>
+                <div class="icons">
+                    <i class="fa-solid fa-laptop" ></i>
+                </div>
+                <div class="company-type">
+                    <span class = "price"><i class="fa-solid fa-indian-rupee-sign"></i> {{obj[i]['price']}}/-</span>
+                    <span class="comp">{{obj[i]['company']}}</span>
+                    <span class="typ">{{obj[i]['typename']}}</span>
+                </div>
+                <div class = "information">
+                    <span class="pro">{{obj[i]['cpu']}}, {{obj[i]['operating system']}}, {{obj[i]['gpu']}} ,{{obj[i]['ram']}} </span>
+        
+                </div>
+                <div class ='button'>
+                    <a href={{obj[i]['link']}} target="_blank"><button class="buynow">Buy Now </button></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+       
+    </div>
+    {% endif %}
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.js"
+          integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+          crossorigin="anonymous"></script>
+<script src="{{url_for('static', filename='script.js')}}"></script>
+</html>
